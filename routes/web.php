@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/','App\Http\Controllers\PagesController@index');
     Route::get('/shop','App\Http\Controllers\PagesController@shop');
+    Route::get('/products','App\Http\Controllers\PagesController@products');
     Route::get('/about','App\Http\Controllers\PagesController@about');
 
 ?>

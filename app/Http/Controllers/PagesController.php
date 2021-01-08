@@ -12,12 +12,17 @@ class PagesController extends Controller
         return view('pages.index')->with('title', $title);
     }
     public function shop(){
+        $title = 'All Under One Roof';
+        //return view('pages.index',compact('title'));
+        return view('pages.index')->with('title', $title);
+    }
+    public function  products(){
         $data = array(
-            'title' => 'shop',
-                'shop' => ['personal Care','Make Up','Hair Care']
+            'title' => 'products',
+                'products' => ['personal Care','Make Up','Hair Care']
         );  
         //return view('pages.shop',compact('title'));
-        return view('pages.shop')->with($data);
+        return view('pages.products')->with($data);
     }
     public function about(){
         $title = 'Learn More About Us';
