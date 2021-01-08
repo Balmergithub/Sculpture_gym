@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="http://localhost/beautyandcosmetics/public/">{{config('app.name', 'indianabeautyandcosmetics')}}</a>
+      <a class="navbar-brand" href="http://localhost/beautyandcosmetics/public/">{{config('app.name', 'beautyandcosmetics')}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -13,7 +13,7 @@
             <a class="nav-link" href="http://localhost/beautyandcosmetics/public/shop">Shop</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://localhost/beautyandcosmetics/public/products" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="http://localhost/beautyandcosmetics/public/products" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
               Products
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
