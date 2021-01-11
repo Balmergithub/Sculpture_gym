@@ -14,8 +14,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = post::all();
-        return view('posts.index')->with('posts',$posts);
+        $post = post::orderBy('title','desc')->get();
+        return view('posts.index')->with('posts',$post);
     }
 
     /**
@@ -47,7 +47,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = post::find($id); //The model is being Parsed through.
+        return view('posts.show')->with('post',$post);
     }
 
     /**
