@@ -3,9 +3,9 @@
 @section('content')
            <h1>{{$title}}</h1>
            @if(count($products) > 0)
-               <ul>
+               <ul class="list-group">
                    @foreach ($products as $product)
-                        <li>{{$product}}</li>                       
+                        <li class="list-group-item">{{$product}}</li>                       
                    @endforeach
                </ul>
            @endif

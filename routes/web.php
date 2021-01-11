@@ -36,4 +36,6 @@ use Illuminate\Support\Facades\Route;
     Route::get('/products','App\Http\Controllers\PagesController@products');
     Route::get('/about','App\Http\Controllers\PagesController@about');
 
+    Route::resource('posts','App\Http\Controllers\PostsController');
+
 ?>

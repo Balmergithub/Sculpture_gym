@@ -11,7 +11,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://localhost/beautyandcosmetics/public/shop">Shop</a>
-          </li>
+          </li>         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://localhost/beautyandcosmetics/public/products" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
               Products
@@ -24,13 +24,16 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="http://localhost/beautyandcosmetics/public/posts">Blog</a>
+          </li> 
+          <li class="nav-item">
             <a class="nav-link" href="http://localhost/beautyandcosmetics/public/about">About</a>
           </li>
         </ul>
-        <form class="d-flex">
+        {{-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> --}}
       </div>
     </div>
   </nav>
