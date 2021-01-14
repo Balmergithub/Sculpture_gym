@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="nav navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="http://localhost/beautyandcosmetics/public/">Home</a>
           </li>
@@ -29,6 +29,9 @@
           <li class="nav-item">
             <a class="nav-link" href="http://localhost/beautyandcosmetics/public/about">About</a>
           </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://localhost/beautyandcosmetics/public/posts/create">Create Post</a></li>
         </ul>
         {{-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
