@@ -12,6 +12,10 @@
         <div class="container">
             @include('include.messages')
             @yield('content')
-        </div>  
+        </div> 
+        <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+        <script>
+            CKEDITOR.replace('summary-ckeditor');
+        </script>  
     </body>
 </html>
