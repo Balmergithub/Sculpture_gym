@@ -18,7 +18,7 @@ class PostsController extends Controller
         //$post = post::where('title','post two')->get(); // views post two in the Database.
         //$post = post::orderBy('title','desc')->take(1)->get(); //views the last entities to be posted in the Database.  
         //$post = post::orderBy('title','desc')->get();
-        $post = post::orderBy('title','desc')->paginate(5);
+        $post = post::orderBy('id','desc')->paginate(5);
         return view('posts.index')->with('posts',$post);
     }
 
