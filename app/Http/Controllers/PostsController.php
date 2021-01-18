@@ -18,7 +18,7 @@ class PostsController extends Controller
         //$post = post::where('title','post two')->get(); // views post two in the Database.
         //$post = post::orderBy('title','desc')->take(1)->get(); //views the last entities to be posted in the Database.  
         //$post = post::orderBy('title','desc')->get();
-        $post = post::orderBy('id','desc')->paginate(5);
+        $post = post::orderBy('id','desc')->paginate();
         return view('posts.index')->with('posts',$post);
     }
 
@@ -49,6 +49,7 @@ class PostsController extends Controller
          $post = new post;
          $post-> title =$request->input('title');
          $post-> body =$request->input('body');
+         $post-> user_id =auth()->user()->id;
          $post-> save();
 
          return redirect('/posts')->with('success','Post Created');
@@ -74,7 +75,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = post::find($id); //The model is being Parsed through.
+        return view('posts.edit')->with('post',$post);
     }
 
     /**
@@ -86,7 +88,19 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'title' =>'required',
+            'body' =>'required'
+        ]);
+       
+        //Create Post
+        $post = post::find($id);
+        $post-> title =$request->input('title');
+        $post-> body =$request->input('body');
+        $post-> user_id =auth()->user()->id;
+        $post-> save();
+
+        return redirect('/posts')->with('success','Post Updated');    
     }
 
     /**
@@ -97,6 +111,9 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post= post::find($id);
+        $post-> delete();
+
+        return redirect('/posts')->with('success','Post Deleted');
     }
 }

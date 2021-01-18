@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                        <h3>Your Blog Post</h3> 
+                        <a href="http://localhost/beautyandcosmetics/public/posts/create" class="btn btn-primary mb-2">Create Posts</a>                   
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@
                   <li><a class="dropdown-item" href="#">Action</a></li>
                   <li><a class="dropdown-item" href="#">Another action</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Dashboard</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="http://localhost/beautyandcosmetics/public/posts">Blog</a></li> 
@@ -27,7 +27,7 @@
               <li class="nav-item"><a class="nav-link" href="http://localhost/beautyandcosmetics/public/posts/create">Create Post</a></li>
               <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">&nbsp &nbsp
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                {{-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
               </form>
                 <!-- Authentication Links -->
                 @guest
@@ -48,17 +48,22 @@
                             {{ Auth::user()->name }}
                         </a>
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <li>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Dashboard</a>
+                          </li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li>
+                              <a class="dropdown-item" href="{{ route('logout') }}"
+                                  onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                                  {{ __('Logout') }}
+                              </a>
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                  </form>
+                          </li>
+                        </ul>
                     </li>
                 @endguest
             </ul>
