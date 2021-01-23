@@ -36,9 +36,8 @@ use Illuminate\Support\Facades\Route;
     Route::get('/products','App\Http\Controllers\PagesController@products');
     Route::get('/about','App\Http\Controllers\PagesController@about');
 
-    Route::resource('posts','App\Http\Controllers\PostsController');
+    Route::resource('/posts','App\Http\Controllers\PostsController');
 
     Auth::routes();
-    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
-
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class,'index']);
 ?>
