@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> Beauty and cosmetics </title>
+    <title> Sculpture Classic Fitness Gym </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -14,7 +14,7 @@
                     @endif
                         <h3>Your Blog Post</h3> 
                     @if (count($posts) > 0)                            
-                        <a href="http://localhost/beautyandcosmetics/public/posts/create" class="btn btn-primary mb-2">Create Posts</a>
+                        <a href="http://localhost/sculpture_gym/public/posts/create" class="btn btn-primary mb-2">Create Posts</a>
                         <table class="table table-striped">
                             <tr>
                                 <th>Title</th>
@@ -24,7 +24,7 @@
                             @foreach ($posts as $post)
                             <tr>
                                 <td>{{$post->title}}</td>                        
-                                <td><a href="http://localhost/beautyandcosmetics/public/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
+                                <td><a href="http://localhost/sculpture_gym/public/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
                                 <td>{!!Form::open(['action'=>['App\Http\Controllers\PostsController@destroy',$post->id],'method'=>'POST','class'=>'text-right'])!!}
                                         {{Form::hidden('_method','DELETE')}}
                                         {{Form::Submit('Delete',['class'=>'btn btn-danger'])}}

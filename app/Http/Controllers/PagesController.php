@@ -7,26 +7,31 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        $title ='Welcome to Beauty and Cosmetics';
+        $title ='Welcome to Sculpture Classic Fitness Gym ';
         //return view('pages.index',compact('title'));
         return view('pages.index')->with('title', $title);
     }
-    public function shop(){
-        $title ='All Under One Roof';
+    public function gallery(){
+        $title ='Gallery';
         //return view('pages.index',compact('title'));
-        return view('pages.shop')->with('title', $title);
+        return view('pages.gallery')->with('title', $title);
     }
-    public function  products(){
+    public function  schedule(){
         $data = array(
-            'title' =>'Products',
-                'products' => ['personal Care','Make Up','Hair Care']
+            'title' =>'schedules',
+                'schedules' => ['Aerobics','Tabata','Pilates']
         );  
         //return view('pages.shop',compact('title'));
-        return view('pages.products')->with($data);
+        return view('pages.schedule')->with($data);
     }
     public function about(){
         $title = 'Learn More About Us';
         //return view('pages.about',compact('title'));
         return view('pages.about')->with('title', $title);
+    }
+    public function contacts(){
+        $title ='Contacts';
+        //return view('pages.index',compact('title'));
+        return view('pages.gallery')->with('title', $title);
     }
 }

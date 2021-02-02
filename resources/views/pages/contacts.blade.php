@@ -2,6 +2,6 @@
  
 @section('content')
            <h1>{{$title}}</h1>
-           <p>this my beauty and products website.</p>
+           <p>Call us now!!.</p>
 @endsection
         

@@ -32,8 +32,9 @@ use Illuminate\Support\Facades\Route;
 */
 
     Route::get('/','App\Http\Controllers\PagesController@index');
-    Route::get('/shop','App\Http\Controllers\PagesController@shop');
-    Route::get('/products','App\Http\Controllers\PagesController@products');
+    Route::get('/gallery','App\Http\Controllers\PagesController@gallery');
+    Route::get('/schedule','App\Http\Controllers\PagesController@schedule');
+    Route::get('/contacts','App\Http\Controllers\PagesController@contacts');
     Route::get('/about','App\Http\Controllers\PagesController@about');
 
     Route::resource('/posts','App\Http\Controllers\PostsController');
