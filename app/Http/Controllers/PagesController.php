@@ -32,6 +32,6 @@ class PagesController extends Controller
     public function contacts(){
         $title ='Contacts';
         //return view('pages.index',compact('title'));
-        return view('pages.gallery')->with('title', $title);
+        return view('pages.contacts')->with('title', $title);
     }
 }

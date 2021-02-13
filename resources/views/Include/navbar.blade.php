@@ -14,22 +14,17 @@
               <li class="nav-item"><a class="nav-link" href="http://localhost/sculpture_gym/public/gallery">GALLERY</a></li>   
               <li class="nav-item"><a class="nav-link" href="http://localhost/sculpture_gym/public/posts">BLOGS</a></li>              
               <li class="nav-item"><a class="nav-link" href="http://localhost/sculpture_gym/public/contacts">CONTACTS</a></li>
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item "><a class="nav-link nav-login" href="http://localhost/sculpture_gym/public/posts/create">Create Post</a></li>
-    
+              <li class="nav-item"><a class="nav-link" href="http://localhost/sculpture_gym/public/posts/create">POST</a></li>            
                 <!-- Authentication Links -->
                 @guest
                     @if (Route::has('login'))
-                        <li class="nav-item nav-login">
-                            <a class="nav-link nav-login" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <li class="nav-item nav-auth">
+                            <a class="nav-link " href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                     @endif
                     
                     @if (Route::has('register'))
-                        <li class="nav-item">
+                        <li class="nav-item nav-auth ">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
@@ -54,6 +49,11 @@
                                     @csrf
                                   </form>
                           </li>
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
+              
                         </ul>
                     </li>
                 @endguest

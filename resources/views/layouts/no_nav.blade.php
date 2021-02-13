@@ -23,14 +23,18 @@
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container-fluid">                        
-            @include('include.navbar')            
-            @include('include.messages')
-            @yield('content')             
-        <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
-        <script>
-            CKEDITOR.replace('summary-ckeditor');
-        </script>  
+    <div class="container-fluid">
+        <div id="app">
+             <main class="py-4">            
+                    {{-- @include('include.navbar') --}}
+                    @include('include.messages')
+                    @yield('content')             
+                <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+                <script>
+                    CKEDITOR.replace('summary-ckeditor');
+                </script>  
+            </main>
+        </div>
     </div>
 </body>
 </html>
